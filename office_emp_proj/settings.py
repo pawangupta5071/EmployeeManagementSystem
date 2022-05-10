@@ -27,6 +27,8 @@ DEBUG = True
 
 CSRF_COOKIE_SECURE=False
 
+CSRF_TRUSTED_ORIGINS=['https://*.empmanagesy.herokuapp.com']
+
 ALLOWED_HOSTS = ['empmanagesy.herokuapp.com', 'localhost']
 
 
