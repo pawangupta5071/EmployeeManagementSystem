@@ -25,6 +25,8 @@ SECRET_KEY = 'django-insecure-04n$_ed7imuc#a1)407lut0-rs%@i6#a(dbo--ihp2r4_lro$5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CSRF_COOKIE_SECURE=False
+
 ALLOWED_HOSTS = ['empmanagesy.herokuapp.com', 'localhost']
 
 
@@ -45,7 +47,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
